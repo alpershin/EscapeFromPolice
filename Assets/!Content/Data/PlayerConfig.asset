@@ -21,6 +21,6 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  MaxSpeed: 10
-  Acceleration: 25
-  RotationAngle: 20
+  MaxSpeed: 20
+  Acceleration: 40
+  RotationAngle: 90

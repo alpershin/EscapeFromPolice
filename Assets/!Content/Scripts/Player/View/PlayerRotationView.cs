@@ -9,6 +9,7 @@ public class PlayerRotationView : MonoBehaviour
 {
     private Rigidbody _rigidBody;
     private CompositeDisposable _life = new();
+    private Vector3 _targetLook;
 
     public ReactiveProperty<Vector3> VelocityStream = new ReactiveProperty<Vector3>();
     
@@ -20,14 +21,17 @@ public class PlayerRotationView : MonoBehaviour
     public void Bind(PlayerRotationViewModel viewModel)
     {
         viewModel.LookDirection
-            .Subscribe(lookDir =>
+            .Subscribe(dir => _targetLook = dir)
+            .AddTo(_life);
+        
+        Observable.EveryUpdate(UnityFrameProvider.FixedUpdate)
+            .Where(_ => _targetLook != Vector3.zero)
+            .Subscribe(_ =>
             {
-                if (lookDir == Vector3.zero) return;
-                var targetRot = Quaternion.LookRotation(lookDir, Vector3.up);
-                _rigidBody.rotation = Quaternion.Slerp(
-                    _rigidBody.rotation,
-                    targetRot,
-                    viewModel.RotationAngle * Time.deltaTime);
+                var targetRot = Quaternion.LookRotation(_targetLook, Vector3.up);
+                var newRot = Quaternion.Lerp(_rigidBody.rotation, targetRot, viewModel.RotationAngle * Time.fixedDeltaTime);
+
+                _rigidBody.MoveRotation(newRot);
             })
             .AddTo(_life);
     }

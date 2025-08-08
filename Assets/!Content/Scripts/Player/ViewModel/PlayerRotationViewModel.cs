@@ -13,7 +13,7 @@ public class PlayerRotationViewModel
     private PlayerConfig _playerConfig;
     
     public ReadOnlyReactiveProperty<Vector3> LookDirection { get; }
-    public float RotationAngle => _playerConfig.MaxSpeed;
+    public float RotationAngle => _playerConfig.RotationAngle;
 
     public PlayerRotationViewModel(ReadOnlyReactiveProperty<Vector3> velocityStream, PlayerConfig config)
     {
