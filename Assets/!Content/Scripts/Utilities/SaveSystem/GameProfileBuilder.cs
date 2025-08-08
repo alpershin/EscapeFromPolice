@@ -1,6 +1,6 @@
 namespace Game.Utilities.SaveSystem
 {
-    //using R3;
+    using R3;
     
     public class GameProfileBuilder
     {
@@ -8,7 +8,6 @@ namespace Game.Utilities.SaveSystem
 
         public GameProfileBuilder InitializeProperties()
         {
-            //_profile.Weapon ??= new SerializableReactiveProperty<EWeaponType>(EWeaponType.BaseballBat);
             return this;
         }
         
@@ -17,6 +16,7 @@ namespace Game.Utilities.SaveSystem
             _profile.Settings = new SettingsData();
             return this;
         }
+        
         
         public GameProfile Build()
         {

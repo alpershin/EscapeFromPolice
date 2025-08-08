@@ -1,29 +1,27 @@
-using UnityEngine;
-
 namespace Game.Utilities.StateMachine
 {
     using System;
     using System.Collections.Generic;
-    //using R3;
+    using R3;
     
     public abstract class StateMachineBase : IDisposable
     {
-        //protected readonly CompositeDisposable _lifetimeDisposable = new CompositeDisposable();
+        protected readonly CompositeDisposable _lifetimeDisposable = new CompositeDisposable();
 
         private readonly Dictionary<Type, IStateBase> _states = new Dictionary<Type, IStateBase>();
         private IStateBase _currentState = null;
 
         protected StateMachineBase()
         {
-            // Observable
-            //     .EveryUpdate()
-            //     .Subscribe(_ => Tick())
-            //     .AddTo(_lifetimeDisposable);
+            Observable
+                .EveryUpdate()
+                .Subscribe(_ => Tick())
+                .AddTo(_lifetimeDisposable);
         }
         
         public void Dispose()
         {
-            //_lifetimeDisposable?.Dispose();
+            _lifetimeDisposable?.Dispose();
         }
 
         public void EnterIn<T>()
