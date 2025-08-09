@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d6c31d75aa14cdd8269c3381a57efb, type: 3}
+  m_Name: EnemyConfigStorage
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _data
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[Game.Scripts.Enum.EEnemyArchetype,
+        Assembly-CSharp],[Game.Scripts.Config.EnemyConfig, Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Game.Scripts.Enum.EEnemyArchetype,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 2|Game.Scripts.Config.EnemyConfig, Assembly-CSharp
+    - Name: Archetype
+      Entry: 3
+      Data: 0
+    - Name: ChaseSpeed
+      Entry: 4
+      Data: 5.5
+    - Name: RoamSpeed
+      Entry: 4
+      Data: 3.5
+    - Name: SenseRadius
+      Entry: 4
+      Data: 12
+    - Name: LoseTargetSeconds
+      Entry: 4
+      Data: 0.8
+    - Name: LineOfSightMask
+      Entry: 7
+      Data: UnityEngine.LayerMask, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: RoamRadiusMeters
+      Entry: 4
+      Data: 15
+    - Name: RoamPickIntervalSeconds
+      Entry: 4
+      Data: 8
+    - Name: RoamMinHopMeters
+      Entry: 4
+      Data: 3
+    - Name: RoamForwardBiasDegrees
+      Entry: 4
+      Data: 100
+    - Name: RoamSampleTries
+      Entry: 3
+      Data: 8
+    - Name: SearchHangSeconds
+      Entry: 4
+      Data: 1.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 3|Game.Scripts.Config.EnemyConfig, Assembly-CSharp
+    - Name: Archetype
+      Entry: 3
+      Data: 1
+    - Name: ChaseSpeed
+      Entry: 4
+      Data: 5.5
+    - Name: RoamSpeed
+      Entry: 4
+      Data: 3.5
+    - Name: SenseRadius
+      Entry: 4
+      Data: 12
+    - Name: LoseTargetSeconds
+      Entry: 4
+      Data: 0.8
+    - Name: LineOfSightMask
+      Entry: 7
+      Data: UnityEngine.LayerMask, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: RoamRadiusMeters
+      Entry: 4
+      Data: 15
+    - Name: RoamPickIntervalSeconds
+      Entry: 4
+      Data: 8
+    - Name: RoamMinHopMeters
+      Entry: 4
+      Data: 3
+    - Name: RoamForwardBiasDegrees
+      Entry: 4
+      Data: 100
+    - Name: RoamSampleTries
+      Entry: 3
+      Data: 8
+    - Name: SearchHangSeconds
+      Entry: 4
+      Data: 1.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: 4|Game.Scripts.Config.EnemyConfig, Assembly-CSharp
+    - Name: Archetype
+      Entry: 3
+      Data: 2
+    - Name: ChaseSpeed
+      Entry: 4
+      Data: 5.5
+    - Name: RoamSpeed
+      Entry: 4
+      Data: 3.5
+    - Name: SenseRadius
+      Entry: 4
+      Data: 12
+    - Name: LoseTargetSeconds
+      Entry: 4
+      Data: 0.8
+    - Name: LineOfSightMask
+      Entry: 7
+      Data: UnityEngine.LayerMask, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: RoamRadiusMeters
+      Entry: 4
+      Data: 15
+    - Name: RoamPickIntervalSeconds
+      Entry: 4
+      Data: 8
+    - Name: RoamMinHopMeters
+      Entry: 4
+      Data: 3
+    - Name: RoamForwardBiasDegrees
+      Entry: 4
+      Data: 100
+    - Name: RoamSampleTries
+      Entry: 3
+      Data: 8
+    - Name: SearchHangSeconds
+      Entry: 4
+      Data: 1.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

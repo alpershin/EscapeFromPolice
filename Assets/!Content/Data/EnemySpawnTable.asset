@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c005ef26b12c41e0bcfc3906f958324, type: 3}
+  m_Name: EnemySpawnTable
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  Entries:
+  - Archetype: 0
+    Weight: 1
+    EnemyPrefab: {fileID: 876965566551309860, guid: 357576294d61585489b47b4a821829b0, type: 3}
+  - Archetype: 1
+    Weight: 1
+    EnemyPrefab: {fileID: 8465638945823485879, guid: 96029aff5c9e19440aee623c708938fb, type: 3}
+  - Archetype: 2
+    Weight: 1
+    EnemyPrefab: {fileID: 3732451511631677801, guid: d6228df3a7c2d5e4091cfaf79fd27bcb, type: 3}

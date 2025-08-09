@@ -22,11 +22,7 @@ namespace Game.Scripts.Player
         {
             _model = new PlayerModel();
 
-            _movementViewModel = new PlayerMovementViewModel(
-                _model,
-                input.MoveAxis,
-                _playerConfig);
-
+            _movementViewModel = new PlayerMovementViewModel(_model, input.MoveAxis, _playerConfig);
             _rotationViewModel = new PlayerRotationViewModel(_rotationView.VelocityStream, _playerConfig);
 
             _movementView.Bind(_movementViewModel);
