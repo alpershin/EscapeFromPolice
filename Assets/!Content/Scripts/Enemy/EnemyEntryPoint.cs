@@ -58,9 +58,6 @@ namespace Game.Scripts.Enemy
                 .AddTo(_lifetimeDisposable);
             
             _enemyViewModel.DestinationWorldPosition
-                .Pairwise()
-                .Where(p => (p.Current - p.Previous).sqrMagnitude >= 0.01f)
-                .Select(p => p.Current)
                 .Subscribe(destination =>
                 {
                     if (NavMesh.SamplePosition(destination, out NavMeshHit hit, 1.0f, NavMesh.AllAreas))

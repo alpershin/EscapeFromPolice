@@ -55,7 +55,7 @@ MonoBehaviour:
       Data: 0
     - Name: ChaseSpeed
       Entry: 4
-      Data: 5.5
+      Data: 15
     - Name: RoamSpeed
       Entry: 4
       Data: 3.5
@@ -91,7 +91,7 @@ MonoBehaviour:
       Data: 8
     - Name: SearchHangSeconds
       Entry: 4
-      Data: 1.5
+      Data: 0.25
     - Name: 
       Entry: 8
       Data: 
