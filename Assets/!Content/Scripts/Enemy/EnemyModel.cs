@@ -1,5 +1,6 @@
 #region Libraries
 
+using Game.Scripts.Enum;
 using UnityEngine;
 
 #endregion
@@ -9,7 +10,7 @@ public class EnemyModel
     /// <summary>
     /// Текущее состояние врага в терминах логики (FSM).
     /// </summary>
-    public EnemyState CurrentState { get; set; } = EnemyState.Idle;
+    public EEnemyState CurrentState { get; set; } = EEnemyState.Idle;
 
     /// <summary>
     /// Последняя известная позиция игрока.

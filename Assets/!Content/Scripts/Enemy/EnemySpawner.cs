@@ -2,6 +2,7 @@
 
 using Game.Scripts.Config;
 using Game.Scripts.Configs;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 #endregion
@@ -12,7 +13,9 @@ namespace Game.Scripts.Enemy
     {
         [SerializeField] private EnemySpawnTable _enemySpawnTable;
         [SerializeField] private EnemyConfigStorage _configStorage;
+        [SerializeField] private Transform _playerTransform;
         
+        [Button]
         public GameObject SpawnOnce()
         {
             var selected = SelectByWeight(_enemySpawnTable.Entries);
@@ -23,10 +26,8 @@ namespace Game.Scripts.Enemy
 
             var enemyEntryPoint = enemy.GetComponent<EnemyEntryPoint>();
             if (enemyEntryPoint != null)
-            {
-                enemyEntryPoint.Construct(_configStorage.GetValue(selected.Archetype), selected.Archetype, transform.position);
-            }
-
+                enemyEntryPoint.Construct(_configStorage.GetValue(selected.Archetype), selected.Archetype, transform.position, _playerTransform);
+            
             return enemy;
         }
 

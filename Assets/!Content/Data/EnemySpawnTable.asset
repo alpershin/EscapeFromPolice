@@ -24,10 +24,10 @@ MonoBehaviour:
   Entries:
   - Archetype: 0
     Weight: 1
-    EnemyPrefab: {fileID: 876965566551309860, guid: 357576294d61585489b47b4a821829b0, type: 3}
+    EnemyPrefab: {fileID: 8400866414781581238, guid: f53193faa28f44a40ae3653642d72f1d, type: 3}
   - Archetype: 1
-    Weight: 1
-    EnemyPrefab: {fileID: 8465638945823485879, guid: 96029aff5c9e19440aee623c708938fb, type: 3}
+    Weight: 0
+    EnemyPrefab: {fileID: 4835343070505195455, guid: 3a50836849a464e5babfb85390bcc41b, type: 3}
   - Archetype: 2
-    Weight: 1
-    EnemyPrefab: {fileID: 3732451511631677801, guid: d6228df3a7c2d5e4091cfaf79fd27bcb, type: 3}
+    Weight: 0
+    EnemyPrefab: {fileID: 8893362786596543025, guid: c95b8cc156770491cb3c335ce6cd2455, type: 3}

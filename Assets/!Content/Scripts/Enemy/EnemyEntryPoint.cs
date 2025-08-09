@@ -16,7 +16,7 @@ namespace Game.Scripts.Enemy
         private EnemyConfig _enemyConfig;
         private EEnemyArchetype _enemyArchetype;
         private Transform _playerTransform;
-        private Transform _homeAnchor;
+        private Vector3 _homeAnchor;
 
         private NavMeshAgent _navMeshAgent;
         private EnemyNavMeshView _enemyNavMeshView;
@@ -32,8 +32,13 @@ namespace Game.Scripts.Enemy
             _enemyNavMeshView = GetComponent<EnemyNavMeshView>();
         }
 
-        public void Construct(EnemyConfig enemyConfig, EEnemyArchetype enemyArchetype, Vector3 home)
+        public void Construct(EnemyConfig enemyConfig, EEnemyArchetype enemyArchetype, Vector3 home, Transform player)
         {
+            _enemyConfig = enemyConfig;
+            _enemyArchetype = enemyArchetype;
+            _homeAnchor = home;
+            _playerTransform = player;
+            
             if (_enemyConfig == null)
             {
                 Debug.LogError("[EnemyEntryPoint] EnemyConfig is not assigned.");
@@ -44,7 +49,7 @@ namespace Game.Scripts.Enemy
             _enemyNavMeshView.ConfigurePerception(_enemyConfig, _playerTransform);
             
             _enemyModel = new EnemyModel();
-            Vector3 homeWorldPosition = _homeAnchor != null ? _homeAnchor.position : transform.position;
+            Vector3 homeWorldPosition = _homeAnchor != null ? _homeAnchor : transform.position;
             
             _enemyViewModel = new EnemyViewModel(_enemyModel, _enemyConfig, _enemyNavMeshView, _enemyArchetype, homeWorldPosition);
             
@@ -58,7 +63,7 @@ namespace Game.Scripts.Enemy
                 .Select(p => p.Current)
                 .Subscribe(destination =>
                 {
-                    if (NavMesh.SamplePosition(destination, out NavMeshHit hit, 1.0f, 0))
+                    if (NavMesh.SamplePosition(destination, out NavMeshHit hit, 1.0f, NavMesh.AllAreas))
                         _navMeshAgent.SetDestination(hit.position);
                 })
                 .AddTo(_lifetimeDisposable);
